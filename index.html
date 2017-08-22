@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Psychic-Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+<div>
+    <h1>Hangman</h1>
+    <p>Press ank key to get started!</p>
+    <p>Wins: <span id="numWins"></span></p>
+    <p>Losses: <span id="numLosses"></span></p>
+    <p>Guesses Left: <span id="guessLeft"></span></p>
+    <p>Your Guesses so far: <span id="incorrectGuesses"></span></p>
+    <p>Word Display: <span id="wordDisplay"></span></p>
+    <canvas id="hangman" width="300px" height="300px"></canvas>
+</div>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
