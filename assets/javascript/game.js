@@ -16,8 +16,10 @@ var userGuess;
 var computerWord = '';
 // Creates variable to hold display of computers word
 var wordDisplay = '';
-//
+// Creates variable to hold the numerical number of wrong guesses (used in hangman drawing)
 var numWrong = 0;
+// Creates variable to hold valid user inputs
+var validInputs = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
 /* FUNCTIONS */
 
@@ -52,11 +54,12 @@ document.onkeyup = function (event) {
     console.log(computerWord);
 
     //
-
-
-    if (computerWord.indexOf(userGuess) > -1) { // if the character is found
-        for (var j = 0; j < computerWord.length; j++) { // loop on all characters
-            if (computerWord[j] === userGuess) // if this is an occurance
+    if (validInputs.indexOf(userGuess) === -1) {
+        alert('Invalid Input')
+    }
+    else if (computerWord.indexOf(userGuess) > -1) {
+        for (var j = 0; j < computerWord.length; j++) {
+            if (computerWord[j] === userGuess)
                 wordDisplay[j] = computerWord[j].toUpperCase();
         }
         if (wordDisplay.indexOf('_') === -1) {
