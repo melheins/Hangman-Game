@@ -237,6 +237,10 @@ function gameOver() {
 
 // Initialize first instance of game
 gameReset();
+document.querySelector('#numWins').innerHTML = "" + numWins;
+document.querySelector('#numLosses').innerHTML = "" + numLosses;
+document.querySelector('#guessLeft').innerHTML = "" + guessLeft;
+document.querySelector('#wordDisplay').innerHTML = wordDisplay.join(" ");
 
 // Check user guess when the user presses a key.
 document.onkeyup = function (event) {
@@ -272,10 +276,11 @@ document.onkeyup = function (event) {
             }
         }
     }
-    // Update HTML with variable values
+// Update HTML with variable values
     document.querySelector('#numWins').innerHTML = "" + numWins;
     document.querySelector('#numLosses').innerHTML = "" + numLosses;
     document.querySelector('#guessLeft').innerHTML = "" + guessLeft;
     document.querySelector('#incorrectGuesses').innerHTML = incorrectGuesses.join(" ");
     document.querySelector('#wordDisplay').innerHTML = wordDisplay.join(" ");
 };
+

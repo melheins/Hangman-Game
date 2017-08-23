@@ -7,6 +7,7 @@
     background-repeat: no-repeat ;
     background-position: center;
     height: 439px;
+    margin-bottom: 40px;
 }
 
 #hangman {
@@ -38,4 +39,8 @@ h2 {
 
 header {
     margin-bottom: 20px;
+}
+
+#score {
+    min-height: 115px;
 }
