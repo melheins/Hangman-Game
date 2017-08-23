@@ -10,15 +10,32 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-<div>
-    <h1>Hangman</h1>
-    <p>Press ank key to get started!</p>
-    <p>Wins: <span id="numWins"></span></p>
-    <p>Losses: <span id="numLosses"></span></p>
-    <p>Guesses Left: <span id="guessLeft"></span></p>
-    <p>Your Guesses so far: <span id="incorrectGuesses"></span></p>
-    <p>Word Display: <span id="wordDisplay"></span></p>
-    <canvas id="hangman" width="300px" height="300px"></canvas>
+<div class="container">
+    <header><h1>PIRATE</h1>
+        <h2>HANGMAN</h2></header>
+    <div id="instructions" class="panel panel-default">
+        <div class="panel-body">
+            <p>The pirate Jack has gone and gotten himself in trouble, guess the correct word and save Jack from the noose!</p>
+            <p>Press ank key to get started!</p></div>
+    </div>
+    <div id="score" class="panel panel-default">
+        <div class="panel-body">
+            <ul class="list-inline">
+                <li><strong>Wins: </strong><span id="numWins"></span></li>
+                <li><strong>Losses: </strong><span id="numLosses"></span></li>
+                <li><strong>Guesses Left: </strong><span id="guessLeft"></span></li>
+            </ul>
+            <p><strong>Your Guesses so far: </strong><br><span id="incorrectGuesses"></span></p>
+        </div>
+    </div>
+    <div id="wordArea" class="panel panel-default">
+        <div class="panel-body">
+            <span id="wordDisplay"></span>
+        </div>
+    </div>
+    <div id="drawing">
+        <canvas id="hangman" width="210px" height="300px"></canvas>
+    </div>
 </div>
 <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>

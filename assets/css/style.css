@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
+@import url('https://fonts.googleapis.com/css?family=Vampiro+One');
+
+
+#drawing {
+    background-image: url("../images/island.jpg");
+    background-repeat: no-repeat ;
+    background-position: center;
+    height: 439px;
+}
+
+#hangman {
+    position: relative;
+    left:18px;
+    top: 18px;
+}
+
+body {
+    background-color: #048dd4;
+}
+.panel-body, header, #drawing {
+    text-align: center;
+}
+
+#wordArea {
+    font-size: 20px;
+}
+
+h1 {
+    font-family: 'Vampiro One', cursive;
+    font-size: 75px;
+}
+
+h2 {
+    font-family: 'Bad Script', cursive;
+    font-size: 40px;
+}
+
+header {
+    margin-bottom: 20px;
+}
