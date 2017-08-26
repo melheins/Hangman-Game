@@ -6,7 +6,7 @@ https://melheins.github.io/Hangman-Game/
 * User is allowed 12 incorrect guesses
 * When the user wins, the number of wins increases and the game starts over.
 * When the user losses, the number of losses increases and the game starts over.
-##Coding Languages
+## Coding Languages
 * HTML
 * CSS
 * Javascript

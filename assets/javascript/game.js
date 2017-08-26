@@ -23,13 +23,13 @@ var validInputs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 /* FUNCTIONS */
 
-//
+// Sets the initial wordDisplay variable with underscores for each letter in the computer's word
 function setWordDashes() {
     for (var i = 0; i < computerWord.length; i++)
         wordDisplay.push('_');
 }
 
-//
+// Updates wordDisplay with the user's correct guess
 function updateWordDisplay() {
     for (var j = 0; j < computerWord.length; j++) {
         if (computerWord[j] === userGuess)
@@ -37,7 +37,7 @@ function updateWordDisplay() {
     }
 }
 
-// Draws base drawing of Hangman dispaly
+// Draws base drawing of Hangman display
 function draw() {
     var ctx = document.getElementById("hangman").getContext('2d');
     ctx.fillStyle = "#048dd4";
@@ -155,60 +155,7 @@ function hang() {
         ctx.lineTo(120, 260);
         ctx.stroke();
     }
-    /**************************STILL NEEDS CLEAN UP  ADD 30Vertical *******************/
-    if (numWrong === 11) {
-        //cover face
-        ctx.fillRect(138, 90, 24, 24);
-        //cover body
-        ctx.fillRect(118, 121.2, 70, 120);
-        //straight mouth
-        ctx.beginPath();
-        ctx.moveTo(140, 108);
-        ctx.lineTo(160, 108);
-        ctx.stroke();
-        //body
-        ctx.beginPath();
-        ctx.moveTo(150, 135);
-        ctx.lineTo(150, 205);
-        ctx.stroke();
-        //right arm
-        ctx.beginPath();
-        ctx.moveTo(150, 150);
-        ctx.lineTo(180, 175);
-        ctx.stroke();
-        //left arm
-        ctx.beginPath();
-        ctx.moveTo(150, 150);
-        ctx.lineTo(120, 175);
-        ctx.stroke();
-        //right leg
-        ctx.beginPath();
-        ctx.moveTo(149, 203);
-        ctx.lineTo(180, 245);
-        ctx.stroke();
-        //left leg
-        ctx.beginPath();
-        ctx.moveTo(151, 203);
-        ctx.lineTo(120, 245);
-        ctx.stroke();
-        ctx.lineWidth = 2;
-        //left eye
-        ctx.beginPath();
-        ctx.moveTo(140, 93);
-        ctx.lineTo(146, 98);
-        ctx.stroke();
-        ctx.moveTo(140, 98);
-        ctx.lineTo(146, 93);
-        ctx.stroke();
-        //right eye
-        ctx.beginPath();
-        ctx.moveTo(154, 98);
-        ctx.lineTo(160, 93);
-        ctx.stroke();
-        ctx.moveTo(154, 93);
-        ctx.lineTo(160, 98);
-        ctx.stroke();
-    }
+    //  9,10,11 are Work In Progress
 }
 
 // Resets the game, by generating a new computer word and resetting guess variables.
@@ -226,12 +173,9 @@ function gameReset() {
 // Sets up game for game over
 function gameOver() {
     numLosses++;
-    setTimeout(function () {
-        alert("GAME OVER\nThe correct word was:\n" + computerWord.toUpperCase());
-    }, 0);
+    alert("GAME OVER\nThe correct word was:\n" + computerWord.toUpperCase());
     gameReset();
 }
-
 
 /* GAME LOGIC */
 
@@ -253,7 +197,7 @@ document.onkeyup = function (event) {
 
     //
     if (validInputs.indexOf(userGuess) === -1) {
-        alert('Invalid Input')
+        alert("Invalid Input");
     }
     else if ((wordDisplay.indexOf(userGuess) === -1) && (incorrectGuesses.indexOf(userGuess) === -1)) {
         if (computerWord.indexOf(userGuess) > -1) {
